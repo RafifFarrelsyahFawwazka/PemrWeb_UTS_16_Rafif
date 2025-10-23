@@ -1,0 +1,300 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* navbar style */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo img {
+    height: 30px;
+    padding-top: 7px ;
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar nav ul li {
+    margin-left: 20px;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 5px 10px;
+}
+
+.navbar nav ul li a:hover {
+    color: #000;
+    border-bottom: 2px solid purple;
+}
+
+/* hero section style */
+.hero-section {
+    position: relative;
+    height: 60vh;
+    background-image: url('img/gambar10.png'); /* memasukkan gambar untuk bg infinix */
+    background-size: cover; 
+    background-position: center;
+}
+
+.hero-overlay {
+    background: rgba(255, 255, 255, 0.5); /* untuk transparan*/
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 100px;
+}
+
+.hero-content {
+    color: black;
+    text-align: left;
+}
+
+.logo-hero img {
+    height: 70px;
+}
+
+.hero-content h1 {
+    font-size: 2em;
+    font-weight: normal;
+}
+
+/* untuk judul section */
+.section-title {
+    font-size: 2.5em;
+    font-weight: 900;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.title-separator {
+    width: 60%;
+    max-width: 500px;
+    border: 0;
+    height: 2px;
+    background-color: black;
+    margin: 0 auto 50px auto;
+}
+
+/* untuk background section */
+.product-section {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+.accessories-section {
+    background-color: #ffffff;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0 50px;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    width: 200px;
+    text-align: center;
+    cursor: pointer; 
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+/* untuk gambar sectionnya */
+.product-card .product-thumbnail {
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover; 
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    font-weight: bold;
+}
+
+/* untuk footer */
+.main-footer {
+    background-color: #f0f0f0;
+    padding: 40px 50px 20px 50px;
+    text-align: left;
+}
+
+.logo-footer img {
+    height: 25px; 
+    display: block;
+    margin-bottom: 20px;
+}
+
+.footer-separator {
+    border: 0;
+    height: 1px;
+    background-color: black;
+    margin: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.footer-column {
+    width: 100%;
+}
+
+.footer-column h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer-column h4 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.footer-column p {
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 0.8em;
+}
+
+/* tombol STORE di footer */
+.footer-column .footer-link-button {
+    display: inline-block;
+    color: #333; 
+    text-decoration: none; 
+    font-size: 1.2em;
+    font-weight: bold;
+    padding-bottom: 5px; 
+    border-bottom: 2px solid purple;
+    transition: all 0.2s;
+}
+
+.footer-column .footer-link-button:hover {
+    color: rgb(255, 0, 0);
+    border-bottom: 2px solid #333;
+}
+
+
+/* style modal (pop-up) --- */
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 2000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6); 
+    padding-top: 50px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    position: relative;
+    animation-name: animasiatas;
+    animation-duration: 0.5s
+}
+
+@keyframes animasiatas {
+    from {top:400px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #000;
+    text-decoration: none;
+}
+
+.modal-body {
+    text-align: center;
+}
+
+.modal-body h2 {
+    margin-top: 15px;
+    color: #333;
+}
+
+.modal-body p {
+    margin: 15px 0 25px 0; 
+    line-height: 1.5;
+}
+
+/* background untuk gambar di dalam pop up */
+.modal-image-container {
+    width: 100%;
+    height: 300px; 
+    overflow: hidden;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#modalProductImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: white;
+}

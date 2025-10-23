@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Infinix</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="img/infinix.png" alt="Logo Infinix">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Beranda</a></li>
+                <li><a href="#smartphone-section">SmartPhone</a></li>
+                <li><a href="#accessories-section">Accessories</a></li>
+                <li><a href="#main-footer">Tentang Kami</a></li> 
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero-section">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <div class="logo-hero">
+                    <img src="img/infinix.png" alt="Logo Infinix Putih"> 
+                </div>
+                <h1>The Future is Now</h1>
+            </div>
+        </div>
+    </div>
+
+    <section class="product-section smartphone-section" id="smartphone-section">
+        <h2 class="section-title">SMARTPHONE</h2>
+        <hr class="title-separator">
+        <div class="product-grid">
+            <div class="product-card" onclick="showProductDetail('Infinix Note 50', 'Fitur kamera 108MP, baterai 5000 mAh, dan layar AMOLED 120Hz', 'img/gambar1.jpg')">
+                <img src="img/gambar1.jpg" alt="Infinix Note 50" class="product-thumbnail">
+                <p>Infinix Note 50</p>
+            </div>
+            <div class="product-card" onclick="showProductDetail('Infinix Note 40', 'Chipset Mediatkek Helio G99, Layar AMOLED 120Hz, Pengisian Cepat 45W, Wireless Charging.', 'img/gambar2.jpg')">
+                <img src="img/gambar2.jpg" alt="Infinix Note 40" class="product-thumbnail">
+                <p>Infinix Note 40</p>
+            </div>
+            <div class="product-card" onclick="showProductDetail('Infinix GT 20 Pro', 'HP Gaming dengan RAM besar (16GB), pendingin vapor chamber, dan prosesor kelas atas.', 'img/gambar3.jpg')">
+                <img src="img/gambar3.jpg" alt="Infinix GT 40 Pro" class="product-thumbnail">
+                <p>Infinix GT 20 Pro</p>
+            </div>
+            <div class="product-card" onclick="showProductDetail('Infinix GT 30 Pro', 'Desain Gaming ber-LED, cocok untuk Gamers, Chipset Mediatek Dimensity 8350.', 'img/gambar4.jpg')">
+                <img src="img/gambar4.jpg" alt="Infinix GT 30 Pro" class="product-thumbnail">
+                <p>Infinix GT 30 Pro</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="product-section accessories-section" id="accessories-section">
+        <h2 class="section-title">ACCESSORIES</h2>
+        <hr class="title-separator">
+        <div class="product-grid">
+            <div class="product-card" onclick="showProductDetail('TWS XE23', 'Suara jernih, tahan air IPX4, dan koneksi Bluetooth 5.3.', 'img/gambar5.jpg')">
+                <img src="img/gambar5.jpg" alt="TWS XE23" class="product-thumbnail">
+                <p>TWS XE23</p>
+            </div>
+            <div class="product-card" onclick="showProductDetail('Power Bank XP05', 'Power bank 20000 mAh, Pengisian cepat 22.5W, indikator LED, dan desain simple.', 'img/gambar6.jpg')">
+                <img src="img/gambar6.jpg" alt="Power Bank XP05" class="product-thumbnail">
+                <p>Power Bank XP05</p>
+            </div>
+            <div class="product-card" onclick="showProductDetail('XBand', 'Pelacak kesehatan, monitor detak jantung, dan baterai hingga 14 hari.', 'img/gambar7.jpg')">
+                <img src="img/gambar7.jpg" alt="XBand" class="product-thumbnail">
+                <p>XBand</p>
+            </div>
+            <div class="product-card" onclick="showProductDetail('Smart Watch XW1', 'Layar AMOLED 1.8 inch, notifikasi pintar, dan berbagai mode olahraga.', 'img/gambar8.jpg')">
+                <img src="img/gambar8.jpg" alt="Smart Watch XW1" class="product-thumbnail">
+                <p>Smart Watch XW1</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer" id="main-footer">
+        <div class="logo-footer">
+            <img src="img/infinix.png" alt="Logo Infinix">
+        </div>
+        <hr class="footer-separator">
+        <div class="footer-content">
+            <div class="footer-column social-media">
+                <h3>SOCIAL MEDIA</h3>
+                <h4>Instagram</h4>
+                <p>@InfinixID</p>
+                <h4>Youtube</h4>
+                <p>InfinixIndonesia</p>
+            </div>
+            
+            <div class="footer-column store">
+                <h3><a href="store.html" class="footer-link-button">STORE</a></h3>
+                <p>Klik untuk melihat daftar lengkap <br> lokasi toko dan jam operasional kami.</p>
+            </div>
+            
+            <div class="footer-column contact-us">
+                <h3>CONTACT US</h3>
+                <p>infinix@gmail.com</p>
+                <p>0341-134134</p>
+            </div>
+        </div>
+
+    <footer class="main-footer" id="main-footer">
+        <hr class="footer-separator">
+        <p class="copyright">Infinix &copy; 2025</p>
+    </footer>
+    
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image-container">
+                    <img id="modalProductImage" src="" alt="Gambar Produk">
+                </div>
+                <h2 id="modalTitle">Nama Produk</h2>
+                <p id="modalDescription">Deskripsi Detail Produk di sini.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
